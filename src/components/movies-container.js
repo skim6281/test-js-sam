@@ -21,11 +21,9 @@ function renderMovies(movies) {
 
 export function MoviesContainer(props) {
   return (
-    <div>
       <ul>
         {renderMovies(props.movies)}
       </ul>
-    </div>
   )
 }
 
