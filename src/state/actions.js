@@ -11,15 +11,23 @@ const compareByTitle = (a,b) => {
   }
 };
 
-const compareByDate = (a,b) => {
-  if (a.releaseDate < b.releaseDate) {
+const compareByYear = (a,b) => {
+  if (a.releaseYear < b.releaseYear) {
     return -1;
-  } else if (a.releaseDate > b.releaseDate) {
+  } else if (a.releaseYear > b.releaseYear) {
     return 1;
   } else {
     return 0;
   }
 };
+
+const compareByYearTitle = (a,b) => {
+  return compareByYear(a,b) || compareByTitle(a,b);
+};
+
+function getYear(movieDate) {
+  return new Date(movieDate).getFullYear();
+}
 
 export function getPopularMovies () {
   //
@@ -37,11 +45,12 @@ export function getPopularMovies () {
 
   movies.forEach(movieArr => {
     movieArr.forEach(movie => {
+      movie.releaseYear = getYear(movie.releaseDate);
       combinedResults.push(movie);
     });
   });
 
-  combinedResults.sort(compareByDate);
+  combinedResults.sort(compareByDateTitle);
 
   return {
     type: 'GET_MOVIES_SUCCESS',
