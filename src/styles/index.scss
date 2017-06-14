@@ -1,4 +1,4 @@
-html, body, ul, li, img, div,span, h2, h3{
+html, body, ul, li, img, button, main, div,span, h2, h3{
   margin: 0;
   padding: 0;
   border: 0;
@@ -10,6 +10,7 @@ html, body, ul, li, img, div,span, h2, h3{
   vertical-align: inherit;
   box-sizing: inherit;
   background: transparent;
+  list-style: none;
 }
 
 body {
@@ -17,9 +18,19 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+button {
+  border: 1px solid #dbdbdb;
+  padding: 5px;
+  border-radius: 5px;
+  background: #fff;
+}
+
+h1, button {
+  margin-left: 30px;
+}
+
 ul {
-  list-style: none;
-  margin: auto;
+  margin: 30px auto;
   max-width: 90%;
 }
 
@@ -68,10 +79,12 @@ span {
     max-width: 770px;
     height: 220px;
   }
+
   .img-container {
     width: 48%;
   }
-  section{
+
+  section {
     width: 52%;
   }
 
@@ -91,9 +104,11 @@ span {
 
   section {
     height: 15%;
+
     h2 {
       font-size: 17px;
     }
+    
     h3, span {
       font-size: 13px;
     }
