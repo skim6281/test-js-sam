@@ -6,14 +6,14 @@ function renderMovies(movies) {
   return movies.map((movie, ind) => {
     return(
       <li key={ind}>
-        <div>
+        <div className="img-container">
           <img src={movie.image}/>
         </div>
-        <div>
-          <h1>{movie.title}</h1>
-          <h2>Price: ${movie.price}</h2>
+        <section>
+          <h2>{movie.title}</h2>
+          <h3>Price: ${movie.price}</h3>
           <span>Year: {movie.releaseYear}</span>
-        </div>
+        </section>
       </li>
     )
   });
@@ -22,7 +22,6 @@ function renderMovies(movies) {
 export function MoviesContainer(props) {
   return (
     <div>
-      <h1>TODO :)</h1>
       <ul>
         {renderMovies(props.movies)}
       </ul>
