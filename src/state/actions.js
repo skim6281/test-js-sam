@@ -16,10 +16,14 @@ export function getPopularMovies () {
 
   const combinedResults = []
 
+  movies.forEach(movieArr => {
+    movieArr.forEach(movie => {
+      combinedResults.push(movie);
+    });
+  });
+
   return {
     type: 'GET_MOVIES_SUCCESS',
     movies: combinedResults
   }
 }
-
-
