@@ -11,6 +11,16 @@ const compareByTitle = (a,b) => {
   }
 };
 
+const compareByDate = (a,b) => {
+  if (a.releaseDate < b.releaseDate) {
+    return -1;
+  } else if (a.releaseDate > b.releaseDate) {
+    return 1;
+  } else {
+    return 0;
+  }
+};
+
 export function getPopularMovies () {
   //
   // movies contains the results of two API requests
@@ -31,7 +41,7 @@ export function getPopularMovies () {
     });
   });
 
-  combinedResults.sort(compareByTitle);
+  combinedResults.sort(compareByDate);
 
   return {
     type: 'GET_MOVIES_SUCCESS',
