@@ -1,0 +1,105 @@
+html, body, ul, li, img, div,span, h2, h3{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+  box-sizing: inherit;
+  background: transparent;
+}
+
+body {
+  background: #f2f2f2;
+  font-family: 'Roboto', sans-serif;
+}
+
+ul {
+  list-style: none;
+  margin: auto;
+  max-width: 90%;
+}
+
+li {
+  margin: 15px;
+  background: #fff;
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.img-container {
+  display: block;
+  background: black;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+section {
+  box-shadow: 1px 2px 2px #dbdbdb;
+  padding: 18px 15px;
+  box-sizing: border-box;
+}
+
+h2 {
+  margin-bottom: 12px;
+}
+
+h3, h2 {
+  font-weight: bold;
+}
+
+span {
+  font-weight: lighter;
+}
+
+@media (min-width: 600px) {
+  li {
+    display: flex;
+    max-width: 770px;
+    height: 220px;
+  }
+  .img-container {
+    width: 48%;
+  }
+  section{
+    width: 52%;
+  }
+
+  h2 {
+    font-size: 22px;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 599px) {
+  li {
+    max-width: 500px;
+  }
+  .img-container {
+    height: 220px;
+  }
+
+  section {
+    height: 15%;
+    h2 {
+      font-size: 17px;
+    }
+    h3, span {
+      font-size: 13px;
+    }
+  }
+
+
+
+
+}
