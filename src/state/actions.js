@@ -1,6 +1,15 @@
 import moment from 'moment'
 import movies from './movies'
 
+const compareByTitle = (a,b) => {
+  if (a.title < b.title) {
+    return -1;
+  }else if (a.title > b.title) {
+    return 1;
+  } else {
+    return 0;
+  }
+};
 
 export function getPopularMovies () {
   //
@@ -21,6 +30,8 @@ export function getPopularMovies () {
       combinedResults.push(movie);
     });
   });
+
+  combinedResults.sort(compareByTitle);
 
   return {
     type: 'GET_MOVIES_SUCCESS',
