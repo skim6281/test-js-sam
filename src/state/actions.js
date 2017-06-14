@@ -1,16 +1,6 @@
 import moment from 'moment'
 import movies from './movies'
 
-const compareByAttr = (a,b) => {
-  if (a < b) {
-    return -1;
-  } else if (a > b) {
-    return 1;
-  } else {
-    return 0;
-  }
-}
-
 const compareByTitle = (a,b) => {
   if (a.title < b.title) {
     return -1;
