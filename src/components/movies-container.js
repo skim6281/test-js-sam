@@ -6,7 +6,14 @@ function renderMovies(movies) {
   return movies.map((movie, ind) => {
     return(
       <li key={ind}>
-        {movie.title}
+        <div>
+          <img src={movie.image}/>
+        </div>
+        <div>
+          <h1>{movie.title}</h1>
+          <h2>Price: ${movie.price}</h2>
+          <span>Year: {movie.releaseYear}</span>
+        </div>
       </li>
     )
   });
